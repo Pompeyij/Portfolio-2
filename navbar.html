@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<header class="sticky top-0 z-50 p-3 shadow-md nav-blur">
+    <nav class="flex bg-transparent font-bold p-4 justify-between items-center">
+        <div>
+            <p class="text-xl">C:\users\<span class="box-gradient">Ikaro</span></p>
+        </div>
+
+      
+        <button id="menu-btn" class="md:hidden flex flex-col gap-1">
+            <span class="w-6 h-[3px] bg-black"></span>
+            <span class="w-6 h-[3px] bg-black"></span>
+            <span class="w-6 h-[3px] bg-black"></span>
+        </button>
+
+      
+        <div id="menu-desk" class="p-4 pr-8 hidden md:block">
+            <ul class="flex gap-6 text-red-400">
+                <li><a class="box-gradient" href="#Home">Home</a></li>
+                <li><a class="box-gradient" href="#Sobre">Sobre</a></li>
+                <li><a class="box-gradient" href="#Projetos">Projetos</a></li>
+                <li><a class="box-gradient" href="#Contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <ul id="mobile-menu" class="md:hidden hidden flex justify-center items-center text-red-400 font-bold slide-down slide-up">
+        <li><a class="box-gradient p-3" href="#Home">Home</a></li>
+        <li><a class="box-gradient p-3" href="#Sobre">Sobre</a></li>
+        <li><a class="box-gradient p-3" href="#Projetos">Projetos</a></li>
+        <li><a class="box-gradient p-3" href="#Contato">Contato</a></li>
+    </ul>
+</header>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+<script>
+    const btn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
